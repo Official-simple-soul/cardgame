@@ -71,12 +71,12 @@ random.addEventListener('click', function() {
 
         // decision
         if (playerCountOne.innerHTML > 20) {
-            nextPlayer.innerHTML = "Player one is out of the game"
+            nextPlayer.innerHTML = "Player 1 is out of the game"
             nextPlayer.classList.add('lost')
         }
 
         if (playerCountTwo.innerHTML > 20) {
-            nextPlayer.innerHTML = "Player two is out of the game"
+            nextPlayer.innerHTML = "Player 2 is out of the game"
             nextPlayer.classList.add('lost')
         }
 })
