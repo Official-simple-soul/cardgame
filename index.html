@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAFECARD</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/home.css">
     <script src="https://kit.fontawesome.com/b353e23091.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- header -->
-    <header>
+    <header class="hide header-box">
         <div class="container">
             <nav>
                 <div class="nav-logo">SAFE<span class="piece">CARD</span></div>
@@ -29,31 +30,43 @@
     </header>
     <!-- end of header -->
 
-    <!-- card game -->
-    <main class="main-3">
-        <div class="container">
-            <section class="card-game">
-                <h2 class="next">Player one pick</h4>
-                <div class="player-cards">
-                    <div class="player-1">
-                        <h3>player 1</h3>
-                        <div class="card-one"></div>
-                    </div>
-                    <div class="player-2">
-                        <h3>player 2</h3>
-                        <div class="card-two"></div>
-                    </div>
+    <!-- welcome -->
+    <main class="welcome-box">
+        <section class="welcome">
+            <div class="container">
+                <div class="nav-logo big" data-aos="zoom-in" data-aos-duration="1000">SAFE<span class="piece">CARD</span></div>
+                <h2 class="lets-play" data-aos="fade-up" data-aos-duration="3000">Let's Play</h2>
+                <div class="loading hide">
+                    <h3 class="load">Loading</h3>
+                    <div class="loading-line"></div>
                 </div>
-                <div class="count">
-                    <button class="player-one-count"></button>
-                    <button class="count-random">Random</button>
-                    <button class="player-two-count"></button>
-                </div>
-            </section>
-        </div>
+                <div class="reader"></div>
+                <div class="reader-num"></div>
+                <div class="in-text"></div>
+            </div>
+        </section>
     </main>
-    <!-- end of card game -->
+    <!-- end of welcome -->
 
-    <script src="js/app.js"></script>
+    <!-- details -->
+    <main class="hide details-box">
+        <section class="details">
+            <div class="container">
+                <h3>Please enter your name</h3>
+                <form action="">
+                    <input type="name" class="input-name" required>
+                    <button class="submit-name" type="submit">Enter</button>
+                </form>
+                <p class="set"></p>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="js/home.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>
