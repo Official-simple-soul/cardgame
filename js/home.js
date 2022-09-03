@@ -50,10 +50,10 @@ letsPlay.addEventListener('click', function() {
 
 
 
-submitName.addEventListener('input', function() {
-    let nameValue = inputName.value
-    set.innerText = `<p class="set">Hi ${nameValue}, Match is set for you</p>`
-})
+// submitName.addEventListener('input', function() {
+//     let nameValue = inputName.value
+//     set.innerText = `<p class="set">Hi ${nameValue}, Match is set for you</p>`
+// })
 
 // const screens = setInterval(() => {
 //     read++
