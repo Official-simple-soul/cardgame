@@ -55,18 +55,18 @@ submitName.addEventListener('input', function() {
     set.innerText = `<p class="set">Hi ${nameValue}, Match is set for you</p>`
 })
 
-const screens = setInterval(() => {
-    read++
+// const screens = setInterval(() => {
+//     read++
 
-    if (read == 90) {
+//     if (read == 90) {
 
-    }
+//     }
 
-    if(read == 100) {
-        clearInterval(screens)
-        welcomeBox.classList.add("hide")
-        welcomeBox.classList.add("opacity")
-        detailsBox.classList.remove("hide")
-        headerBox.classList.remove("hide")
-    }
-}, 50)
+//     if(read == 100) {
+//         clearInterval(screens)
+//         welcomeBox.classList.add("hide")
+//         welcomeBox.classList.add("opacity")
+//         detailsBox.classList.remove("hide")
+//         headerBox.classList.remove("hide")
+//     }
+// }, 50)
