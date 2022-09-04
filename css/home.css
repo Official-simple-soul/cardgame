@@ -25,7 +25,7 @@
     text-align: center;
 }
 
-.welcome-box {
+.welcome-box, .detailsBox, .headerBox {
     transition: all 1s ease;
 }
 
@@ -110,6 +110,7 @@
     font-size: 17px;
     margin-top: 25px;
     display: block;
+    border-radius: 5px;
 }
 
 .details input:focus {
@@ -118,13 +119,39 @@
     color: white;
 }
 
-.details button {
+.details h4 {
     margin-top: 20px;
     padding: 4px 15px;
     font-size: 15px;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+    width: 40%;
+    margin: 10px auto;
 }
 
 .set {
     color: white;
     margin-top: 40px;
+    font-size: 18px;
+}
+
+.valid {
+    color: white;
+    position: absolute;
+    top: 20%;
+    background-color: red;
+    padding: 3px 8px;
+    border-radius: 6px;
+    transition: all 1s ease;
+    animation: validup 1s;
+}
+
+@keyframes validup {
+    0% {
+        transform: translateY(70px);
+    }
+    100% {
+        transform: translateY(0px);
+    }  
 }

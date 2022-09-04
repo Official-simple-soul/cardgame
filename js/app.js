@@ -7,6 +7,8 @@ let playerCountOne = document.querySelector('.player-one-count')
 let playerCountTwo = document.querySelector('.player-two-count')
 let navSelect = document.querySelectorAll('.nav-links ul li')
 let nextPlayer = document.querySelector('.next')
+let playOne = document.querySelector('.playone')
+let playTwo = document.querySelector('.playtwo')
 let lg = console.log.bind(document)
 
 navSelect.forEach(function(item) {
@@ -22,6 +24,29 @@ toggler.addEventListener('click', function() {
     toggler.classList.toggle('fa-xmark')
 })
 
+let nameValue = inputName.value
+
+submitName.addEventListener('click', function() {
+    
+    if (nameValue.length < 2) {
+            validInput.classList.remove('hide')
+            setTimeout(() => {
+                validInput.classList.add('hide')
+            }, 3000)
+            set.innerText = ''
+        }
+    else {
+        set.innerText = `Hi ${nameValue}, match is set for you`
+    }
+
+    setTimeout(() => {
+        location.href = 'home.html'
+    }, 4000)
+
+})
+
+playOne.innerHTML = `${nameValue}`
+playTwo.innerHTML = `${nameValue}`
 
 random.addEventListener('click', function() {
     random.classList.toggle('change')
@@ -36,7 +61,7 @@ random.addEventListener('click', function() {
         if (!random.classList.contains('change')) {
             cardTwo.innerHTML = randomNumber
             playerCountTwo.innerHTML = inner2
-            nextPlayer.innerHTML = 'Player one pick'
+            nextPlayer.innerHTML = `${nameValue}`
 
             if(randomNumber <= 4) {
                 cardTwo.style.backgroundColor = 'red'
@@ -54,7 +79,7 @@ random.addEventListener('click', function() {
         else {
             cardOne.innerHTML = randomNumber
             playerCountOne.innerHTML = inner
-            nextPlayer.innerHTML = 'Player two pick'
+            nextPlayer.innerHTML = `${nameValue}`
 
             if(randomNumber <= 4) {
                 cardOne.style.backgroundColor = 'red'
@@ -71,14 +96,13 @@ random.addEventListener('click', function() {
 
         // decision
         if (playerCountOne.innerHTML > 20) {
-            nextPlayer.innerHTML = "Player 1 is out of the game"
+            nextPlayer.innerHTML = `${nameValue} is out of the game`
             nextPlayer.classList.add('lost')
         }
 
         if (playerCountTwo.innerHTML > 20) {
-            nextPlayer.innerHTML = "Player 2 is out of the game"
+            nextPlayer.innerHTML = `${nameValue} is out of the game`
             nextPlayer.classList.add('lost')
         }
 })
-
 

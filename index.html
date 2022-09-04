@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- header -->
-    <header class="hide header-box">
+    <header class="header-box hide">
         <div class="container">
             <nav>
                 <div class="nav-logo">SAFE<span class="piece">CARD</span></div>
@@ -35,7 +35,7 @@
         <section class="welcome">
             <div class="container">
                 <div class="nav-logo big" data-aos="zoom-in" data-aos-duration="1000">SAFE<span class="piece">CARD</span></div>
-                <h2 class="lets-play" data-aos="fade-up" data-aos-duration="3000">Let's Play</h2>
+                <h2 class="lets-play" data-aos="fade-up" data-aos-duration="3000">Click, let's play</h2>
                 <div class="loading hide">
                     <h3 class="load">Loading</h3>
                     <div class="loading-line"></div>
@@ -49,13 +49,14 @@
     <!-- end of welcome -->
 
     <!-- details -->
-    <main class="hide details-box">
+    <main class="details-box hide">
         <section class="details">
             <div class="container">
+                <h1 class="valid hide">please enter a valid name</h1>
                 <h3>Please enter your name</h3>
-                <form action="">
-                    <input type="name" class="input-name" required>
-                    <button class="submit-name" type="submit">Enter</button>
+                <form>
+                    <input type="name" class="input-name" value="">
+                    <h4 class="submit-name">Enter</h4>
                 </form>
                 <p class="set"></p>
             </div>
@@ -64,6 +65,7 @@
 
 
     <script src="js/home.js"></script>
+    <script src="js/app.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
