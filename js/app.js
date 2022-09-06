@@ -111,6 +111,21 @@ random.addEventListener('click', function() {
             document.querySelector('.winner-name').innerText = nameArr[0]
 
         }
+
+        if (playerCountOne.innerHTML == 20) {
+            nextPlayer.innerHTML = `${nameArr[0]} wins`
+            nextPlayer.classList.add('win')
+            document.querySelector('.continue').classList.remove('hide')
+            document.querySelector('.winner-name').innerText = nameArr[0]
+        }
+
+        if (playerCountTwo.innerHTML == 20) {
+            nextPlayer.innerHTML = `${nameArr[1]} wins`
+            nextPlayer.classList.add('win')
+            document.querySelector('.continue').classList.remove('hide')
+            document.querySelector('.winner-name').innerText = nameArr[1]
+
+        }
 })
 
 function allRead(n) {
