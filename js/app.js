@@ -54,7 +54,7 @@ submitName.addEventListener('click', function() {
         playOne.innerHTML = nameArr[0]
         playTwo.innerHTML = nameArr[1]
         set.innerHTML = `${nameArr[0]} vs ${nameArr[1]}`
-        document.querySelector('.enter-names').innerHTML = 'You game is been set'
+        document.querySelector('.enter-names').innerHTML = 'Please wait, your game is been set'
         let gettingSet = setInterval(() => {
             getstart++
             document.querySelector('.getting-ready').classList.remove('hide')
