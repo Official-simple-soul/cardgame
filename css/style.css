@@ -14,16 +14,6 @@ body {
     background-repeat: no-repeat;
     padding-bottom: 30px;
 }
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.841);
-    padding: 15px 10px;
-    border-bottom: 2px solid rgb(0, 128, 105);
-}
-
 .nav-logo {
     font-weight: bold;
     color: rgb(0, 128, 105);
@@ -35,50 +25,13 @@ nav {
     font-size: 25px;
 }
 
-.nav-links ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-links ul li {
-    font-weight: bold;
-    color: rgb(0, 128, 105);
-    border-bottom: 1px solid rgb(0, 128, 105);
-    margin: 0 13px;
-    list-style: none;
-    cursor: pointer;
-    border: 1px solid;
-    padding: 3px;
-    font-size: 14px;
-    border-radius: 5px;
-    transition: all ease 0.5s;
-}
-
-.nav-links ul li:hover {
-    background-color: rgba(245, 245, 245, 0.148);
-    transform: scale(1.2);
-    font-size: 12px;
-    box-shadow: inset 1px 1px 5px 5px rgb(0, 128, 105);
-    color: white;
-    border: none;
-}
-
-.active {
-    background-color: rgba(245, 245, 245, 0.148);
-    transform: scale(1.2);
-    font-size: 12px;
-    box-shadow: inset 1px 1px 5px 5px rgb(0, 128, 105);
-    border: none;
-}
-
 .main-3 {
     background-color: transparent;
 }
 
 .main-3 .container {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -142,50 +95,255 @@ nav {
 .lost {
     background-color: red;
     border-radius: 10px;
-    transform: translateY(-60px);
+    transform: translateY(-30px);
     transition: all 1s ease;
     padding: 15px 0;
     z-index: -10;
 }
 
+.lets-play {
+    margin: 20px 0;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    width: 80%;
+    margin: 25px auto;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+.opacity {
+    opacity: 0;
+}
+
+.welcome {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.welcome-box, .detailsBox, .headerBox {
+    transition: all 1s ease;
+}
+
+.welcome .nav-logo {
+    font-size: 40px;
+    text-shadow: 1px 1px white;
+}
+
+.welcome .piece {
+    font-size: 45px;
+}
+
+.reader {
+    /* width: 100%; */
+    height: 5px;
+    background-color: rgb(0, 128, 105);
+    position: absolute;
+    left: 0;
+    margin-top: 40%;
+}
+
+.reader-num {
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 43%;
+}
+
+.loading {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    /* margin: 20px 0 0 0; */
+}
+
+.loading-line {
+    width: 40px;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    margin: auto;
+    transition: all 0.5s ease;
+    animation: load 1.5s infinite linear;
+}
+
+
+@keyframes load {
+    0% {
+        transform: translateX(-20px);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+    
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+.in-text {
+    color: white;
+    position: absolute;
+    margin-top: 53%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.details {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.details input {
+    width: 250px;
+    padding: 5px;
+    font-size: 17px;
+    margin-top: 25px;
+    display: block;
+    border-radius: 5px;
+}
+
+.details input:focus {
+    outline: 2px solid rgb(0, 128, 105);
+    background-color: transparent;
+    color: white;
+}
+
+.details h4 {
+    margin-top: 20px;
+    padding: 4px 15px;
+    font-size: 15px;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+    width: 40%;
+    margin: 10px auto;
+}
+
+.set {
+    color: white;
+    margin: 60px 0;
+    font-size: 32px;
+    text-shadow: 1px 1px black;
+}
+
+.valid {
+    color: white;
+    position: absolute;
+    top: 20%;
+    background-color: red;
+    padding: 3px 8px;
+    border-radius: 6px;
+    transition: all 1s ease;
+    animation: validup 1s;
+}
+
+@keyframes validup {
+    0% {
+        transform: translateY(70px);
+    }
+    100% {
+        transform: translateY(0px);
+    }  
+}
+
+.getting-ready {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    border-radius: 50%;
+    border: 8px dashed rgba(255, 255, 255, 0.439);
+    /* transition: all ease 1s; */
+    animation: rotate 3s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    } 
+}
+
+.card-one-bg {
+    position: absolute;
+    top: 21%;
+    left: 5%;
+    font-size: 250px;
+    color: rgba(0, 0, 0, 0.107);
+}
+
+.card-two-bg {
+    position: absolute;
+    top: 21%;
+    right: 7%;
+    font-size: 250px;
+    color: rgba(0, 0, 0, 0.107);
+}
+
+.congratulations .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.continue {
+    padding: 5px 30px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    margin-top: 60px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.winner-name {
+    text-transform: uppercase;
+    color: rgb(246, 190, 4);
+    font-size: 80px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    text-shadow: 3px 3px rgb(157, 138, 29);
+}
+.play-again {
+    padding: 5px 30px;
+    font-size: 25px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid rgb(246, 190, 4);
+    color: rgb(246, 190, 4);
+}
+
+.body-center {
+    display: none;
+}
 
 @media (max-width: 450px) {
 
-    .fa-solid {
-        color: white;
-        font-size: 25px;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 10%;
-        bottom: 100%;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.893), rgba(0, 0, 0, 0.87)), url(img/pexels-vlad-alexandru-popa-1402787.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        right: 0;
-        left: 0;
-        overflow: hidden;
-        transition: all 0.5s ease;
-    }
-
-    .show {
-        bottom: 0;
-        padding: 30px;
-    }
-
-    .nav-links ul {
-        flex-direction: column;
-    }
-
-    .nav-links ul li {
-        margin: 25px 0;
-        padding: 8px 30px;
-    }
 
     .player-1, .player-2 {
         width: 40%;
+    }
+
+    .playerone, .playertwo {
+        text-transform: uppercase;
     }
 
     .card-one, .card-two {
@@ -198,5 +356,29 @@ nav {
 
     .count-random {
         background-color: lightgoldenrodyellow;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 2200px)  {
+    .body-center {
+        display: block;
+    }
+
+    .flex-it {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+
+    .content h3 {
+        margin-top: 5%;
+    }
+
+    .others {
+        display: none;
     }
 }
