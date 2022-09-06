@@ -20,6 +20,7 @@ let main = document.querySelector('.main-3')
 let welcomeBox = document.querySelector('.welcome-box')
 let detailsBox = document.querySelector('.details-box')
 let congrat = document.querySelector('.congratulations')
+let rules = document.querySelector('.rules')
 let validInput = document.querySelector('.valid')
 let read = 0
 let getstart = 0
@@ -60,7 +61,7 @@ submitName.addEventListener('click', function() {
             document.querySelector('.getting-ready').classList.remove('hide')
             if (getstart == 100) {
                 clearInterval(gettingSet)
-                main.classList.remove('hide')
+                rules.classList.remove('hide')
                 detailsBox.classList.add('hide')
             }
         }, 50)
@@ -189,4 +190,9 @@ document.querySelector('.continue').addEventListener('click', () => {
 
 document.querySelector('.play-again').addEventListener('click', () => {
     window.location.reload()
+})
+
+document.querySelector('.rule-continue').addEventListener('click', () => {
+    main.classList.remove('hide')
+    rules.classList.add('hide')
 })
