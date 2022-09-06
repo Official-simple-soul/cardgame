@@ -335,6 +335,13 @@ body {
     display: none;
 }
 
+.two-player {
+    font-size: 25px;
+    color: white;
+    margin-bottom: 50px;
+    letter-spacing: 5px;
+}
+
 @media (max-width: 450px) {
 
 
