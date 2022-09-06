@@ -4,7 +4,6 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'EB Garamond', serif;
-
 }
 
 body {
@@ -330,7 +329,7 @@ body {
     margin-top: 50px;
     margin-bottom: 80px;
     text-shadow: 3px 3px rgb(157, 138, 29);
-    width: 97%;
+    width: 90%;
 }
 
 .play-again {
