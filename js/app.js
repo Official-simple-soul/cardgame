@@ -45,17 +45,17 @@ submitName.addEventListener('click', function() {
             set.innerText = ''
         }
     else {
-        nameArr.push(nameValue)
+        nameArr.unshift(nameValue)
         inputName.value = ''
         lg(nameArr[0])
         lg(nameArr.length)
     }
     
     lg(nameArr)
-    if(nameArr.length == 1) {
+    if(nameArr.length == 2) {
         document.querySelector('.enter-names').innerHTML = 'Player 2, enter your name'
     }
-    else if (nameArr.length == 2) {
+    else if (nameArr.length == 3) {
         inputName.classList.add('opacity')
         submitName.classList.add('hide')
         playOne.innerHTML = nameArr[0]
