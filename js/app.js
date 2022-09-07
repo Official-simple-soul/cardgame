@@ -88,9 +88,7 @@ submitName2.addEventListener('click', function() {
      else {
          nameArr.unshift(nameValue)
          inputName2.value = ''
-     }
-
-        inputName2.classList.add('opacity')
+         inputName2.classList.add('opacity')
         submitName2.classList.add('hide')
         playOne.innerHTML = nameArr[0]
         playTwo.innerHTML = 'Computer'
@@ -105,9 +103,8 @@ submitName2.addEventListener('click', function() {
                 detailsBoxComputer.classList.add('hide')
             }
         }, 50)
-
-       
-     
+     }
+   
  })
 
 
